@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="styles.css">
+  <title>Supplier Registration</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Menu Page</Menu></a></li>
+        </ul>
+    </nav>
+</header>
+
+  <div class="container">
+    <h1>Raw Material Registration Form</h1>
+    <form id="supplierForm">
+
+      <label for="name" > Company Name:</label> 
+      <input type="text" id="p1-1" required>
+
+      <label for="Address line 1">Address Line 1:</label> 
+      <input type="text" id="Address Line 1" required>
+      
+      <label for="Address Line 2">Address Line 2:</label> 
+      <input type="text" id="Address Line 2" required>
+      
+      <label for="Post Code">Post Code:</label>
+      <input type="text" id="Post Code" required>
+      
+      <label for="businessName">Business Name:</label>
+      <input type="text" id="businessName" required>
+
+      <section>
+        <div class="space">
+        <div class="border">
+        
+          <legend>Technical Information</legend>
+        </div>
+        </div>
+        
+
+          <div><span><label for="tcontact1" class="no">Name of Technical Contact: <input type="text" id="tcontact1" class="right" required></span></label>
+             
+          <p></p>
+
+          <span><label for="tcontact2" class="no">Technical Contact E-mail: <input type="email" id="tcontact2" class="right" required></span></label>
+
+          <p></p>
+      
+          <span><label for="tcontact3" class="no">Technical Contact Phone Number: <input  [type="number"] {-moz-appearance:textfield;}  id="tcontact3" class="right" required></span></label></div>
+      </section>
+      <section>
+        <div class="space">
+        <legend>Emergency Information</legend>
+        <div class="border"></div>
+        </div>
+
+       <div><span><label for="econtact1">Name of Emergency Contact: <input type="text" id="econtact1" class="right" required></span></label>
+
+        <p></p>
+      
+      <span><label for="econtact2">Emergency Contact E-mail: <input type="email" id="econtact2" class="right" required></span></label>
+        
+      <p></p>
+
+      <span><label for="econtact3">Emergency Contact Phone Number: <input  [type="number"] {-moz-appearance:textfield;}  id="econtact3" class="right" required></span></div></label>
+      </section>
+
+      <div class="border"></div>
+      
+      
+      <label for="brcorequiv" required for="BRC">We currently only accept raw material suppliers with the following valid credentials, please select one. 
+      </label> 
+        <Select class="BRC"> 
+        <Option value="">(Select one)</Option>
+          <Option value="1">BRCGS certification</Option>
+          <Option value="2">International Featured Standards</Option>
+          <Option value="3">FSSC 22000</Option>
+          <Option value="4">CANADAGAP</Option>
+          <Option value="5">EFI</Option>
+          <Option value="6">FRESHCARE</Option>
+          <Option value="7">GLOBALG.A.P.</Option>
+          <Option value="8">GRMS</Option>
+          <Option value="9">Global Seafood Alliance</Option>
+          <Option value="10">JFSM</Option>
+          <Option value="11">ASIAGAP</Option>
+          <Option value="12">PrimusGFS</Option>
+          <Option value="13">SQF INSITUTE</Option>
+        </select>
+      <break></break>
+      <break></break>
+      
+      <label for="brcdoc">Please upload a valid certification:</label>
+      <input type="file" id="brcdoc" class="short" required>
+      
+      <label for="haulerInfo">Hauler Information:</label>
+      <input type="text" id="haulerInfo" required>
+      
+      <label for="supplierInfo">Supplier Information:</label>
+      <textarea id="supplierInfo" required></textarea>
+      
+      <button type="Go to Page 2"><a href="Page2.html">Go to Page 2 out of 21</a></button>
+    </form>
+  </div>
+  <script src="script.js.js"></script>
+</body>
+<Anchor>
+</Anchor>
+</html>

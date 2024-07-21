@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css.css">
+  <script src="script.js.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Supplier Registration</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Menu Page</Menu></a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Supplier Registration Form</h1>
+    <form id="supplierForm">
+
+      <label for="PN">Product Name: MUST BE SAME AS ON DELIVERY NOTES:</label>
+      <input type="text" id="PN" required>
+      
+      <label for="LDN">Legal Declaration name 
+        (if different from Product Name):</label>
+      <input type="text" id="LDN" required>
+      
+      <label for="PD">Product Description:</label>
+      <input type="text" id="PD" required>
+      
+      <label for="PCS">Product Code (Supplier):</label>
+      <input type="text" id="PCS" required>
+      
+      <label for="PCP">Product Code (Pukka):</label>
+      <input type="text" id="PCP" required>
+      
+      <label for="UW">Unit Weight:</label>
+      <input type="text" id="UW" required>
+      
+      <label for="NPP">Number Per Pack:</label>
+      <input type="text" id="NPP" required>
+      
+      <label for="haulerInfo">Hauler Information:</label>
+      <input type="text" id="haulerInfo" required>
+      
+      <label for="NUPO">No. Units per Outer:</label>
+      <textarea id="NUPO" required></textarea>
+
+      <label for="OPP">Outers Per Pallet:</label>
+      <textarea id="OPP" required></textarea>
+
+      <section class="box-section">
+        <h2>Sub-Box Information</h2>
+      <table>
+        <thead>
+          <tr class="top">
+            <th>
+              <label for=""></label>
+            </th>
+            <th>
+              <label for="Average">Average</label>
+            </th>
+            <th>
+              <label for="Maximum">Maximum</label>
+            </th>
+            <th>
+            <label for="Minimum">Minimum</label>
+            </th>
+          </tr>
+          <thead>
+          <tbody>
+          <tr>
+            <th>
+              <label for="unitWeight">Unit Weight (kg):</label>
+             </th>
+             <td>
+              <input type="text" id="unitWeight">
+             </td>
+             <td>
+              <input type="text" name="" id="Average1">
+             </td>
+             <td>
+              <input type="text" id="Minimum1">
+             </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="numPerPack">Number per Pack:</label>
+            </th>
+            <td>
+              <input type="text"  id="numPerPack">
+            </td>
+            <td>
+              <input type="text" name="" id="Average2">
+            </td>
+            <td>
+              <input type="text" id="Minimum2">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="numPerOuter">Number per Outer:</label>
+            </th>
+            <td>
+              <input type="text" id="numPerOuter">
+            </td>
+            <td>
+              <input type="text" name="" id="Average3">
+            </td>
+            <td>
+              <input type="text" id="Minimum4">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="outersPerPallet">Outers per Pallet:</label>
+            </th>
+            <td>
+              <input type="text" id="outersPerPallet">
+            </td>
+            <td>
+              <input type="text" name="" id="Average4">
+            </td>
+            <td>
+              <input type="text" id="Minimum4">
+            </td>
+          </tr>
+        </tbody>
+        </table>
+        <br><br>
+     <button type="Go to Page 3"><a href="Page3.html">Go to Page 3 out of 21</a></button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

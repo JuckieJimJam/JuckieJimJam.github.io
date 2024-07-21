@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css.css">
+<head>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Menu Page</Menu></a></li>
+        </ul>
+    </nav>
+  </header>
+    <div class="container">
+        <h1>Raw Material Registration Form</h1>
+        <form id="supplierForm">
+            <div class="border"></div>
+            <h3>Recommended Ingredient Declaration for product supplied:</h3>
+            <input type="text" id="Declaration" class="Declaration">
+            <h2>Raw Material Information</h2>
+
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th class="rowspace">Ingredient</th>
+                        <th class="rowspace">Supplier</th>
+                        <th class="rowspace">Country of Origin</th>
+                        <th class="rowspace">%(Mixing Bowl)</th>
+                        <th class="rowspace">%(Final Product)</th>
+                        <th class="rowspace">Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button type="button" onclick="addRow()">Add Row</button>
+            <button><a href="Page4.html">Go to Page 4 out of 21</a></button> <!-- corrected button tag -->
+        </form>
+    </div>
+
+  <script>
+    function addRow() {
+      var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(table.rows.length);
+      var cells = [];
+      for (var i = 0; i < 6; i++) {
+        cells[i] = newRow.insertCell(i);
+      }
+      cells[0].innerHTML = '<input type="text" name="ingredient' + (table.rows.length) + '">';
+      cells[1].innerHTML = '<input type="text" name="supplier' + (table.rows.length) + '">';
+      cells[2].innerHTML = '<input type="text" name="country' + (table.rows.length) + '">';
+      cells[3].innerHTML = '<input type="text" name="mixingBowl' + (table.rows.length) + '">';
+      cells[4].innerHTML = '<input type="text" name="finalProduct' + (table.rows.length) + '">';
+      
+      var removeCell = newRow.insertCell(5);
+      removeCell.innerHTML = '<button type="button" onclick="deleteRow(this)">Remove</button>';
+
+      document.getElementById("dataTable").getElementsByTagName('thead')[0].style.display = 'table-row-group';
+    }
+    function deleteRow(button) {
+      var row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+
+      if (document.getElementById("dataTable").getElementsByTagName('tbody')[0].rows.length === 0) {
+        document.getElementById("dataTable").getElementsByTagName('thead')[0].style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css.css">
+<head>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Menu Page</Menu></a></li>
+        </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Raw Material Registration Form</h1>
+    <form id="supplierForm">
+      <div class="border"></div>
+
+      <h3>Are any additives or processing aids used in the manufacture of the product?</h3>
+      <Select class="BRC" required> 
+        <Option value="">(Select one)</Option>
+          <Option value="1">Yes</Option>
+          <Option value="2">No</Option>
+        </select>
+       <h2>Raw Material Information</h2>
+
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th class="rowspace">Name</th>
+            <th class="rowspace">E no.</th>
+            <th class="rowspace">Function</th>
+            <th class="rowspace">Natural, Nature Identical / Artificial?</th>
+            <th class="rowspace">Legal Max.</th>
+            <th class="rowspace">% in Product</th>
+            <th class="rowspace">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button type="button" onclick="addRow()">Add Row</button>
+      <button type="Go to Page 4"><a href="Page5.html">Go to Page 5 out of 21</a></button>
+    </form>
+  </div>
+
+  <script>
+    function addRow() {
+      var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(table.rows.length);
+      var cells = [];
+      for (var i = 0; i < 6; i++) {
+        cells[i] = newRow.insertCell(i);
+      }
+      cells[0].innerHTML = '<input type="text" name="ingredient' + (table.rows.length) + '">';
+      cells[1].innerHTML = '<input type="text" name="supplier' + (table.rows.length) + '">';
+      cells[2].innerHTML = '<input type="text" name="country' + (table.rows.length) + '">';
+      cells[3].innerHTML = '<input type="text" name="mixingBowl' + (table.rows.length) + '">';
+      cells[4].innerHTML = '<input type="text" name="finalProduct' + (table.rows.length) + '">';
+      cells[5].innerHTML = '<input type="text" name="finalProduct' + (table.rows.length) + '">';
+      
+      var removeCell = newRow.insertCell(6);
+      removeCell.innerHTML = '<button type="button" onclick="deleteRow(this)">Remove</button>';
+
+      document.getElementById("dataTable").getElementsByTagName('thead')[0].style.display = 'table-row-group';
+    }
+    function deleteRow(button) {
+      var row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+
+      if (document.getElementById("dataTable").getElementsByTagName('tbody')[0].rows.length === 0) {
+        document.getElementById("dataTable").getElementsByTagName('thead')[0].style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

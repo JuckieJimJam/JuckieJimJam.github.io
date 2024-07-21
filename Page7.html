@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 100px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    form {
+      gap: 15px;
+    }
+    input{
+      padding: 5px 5px 5px 5px;
+    }
+
+    input, textarea, select {
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      padding: 6px 6px 6px 6px;
+    }
+
+    button {
+      padding: 15px 20px;
+      background-color: #E97305;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    a {
+      color: white;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .submit {
+      color: white;
+    }
+
+    .border {
+      border-bottom: 2px solid black;
+      margin: 20px 0;
+    }
+    
+    
+    nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #E97305;
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: left;
+  padding: -10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+tr{
+  border-bottom: black 20px;
+  padding-bottom: 20px;
+  margin: 5px;
+
+}
+.row{
+  padding:8px;
+}
+th{
+  padding: 3px;
+}
+.bold{
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Menu Page</Menu></a></li>
+        </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Raw Material Registration Form</h1>
+    <form id="supplierForm">
+      <div class="border"></div>
+
+      <h3>NUTRITIONAL INFORMATION</h3>
+      <h2>Figures in bold should add up to 100%+/-0.5</h2>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th></th><th>Value per 100g</th><th>Method</th>
+          </tr>
+          <tr>
+            <th class="row"><label for="kJ"></label>Energy / kJ</th>
+            <th><input [type="number"] {-moz-appearance:textfield;} id="kJ100" class="Nutritional"></th>
+            <th><input type="text"id="method"></th>
+          </tr>
+           <th class="row">Energy / kcal </th>
+           <th><label for="kcal100"></label><input [type="number"] {-moz-appearance:textfield;} id="kcal00" class="Nutritional"></th>
+           <th><label for="kcalmeth"></label><input type="text"id="kcalmeth"></th>
+          <tr>
+            <th class="Bold">Fat </th>
+            <th>
+              <label for="fat100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="fat100" class="Nutritional">
+            </th>
+            <th>
+              <label for="fatmeth"></label>
+              <input type="text"id="fatmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">of which saturates</th>
+            <th>
+              <label for="saturates100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="saturates100" class="Nutritional">
+            </th>
+            <th>
+              <label for="saturatesmeth"></label>
+              <input type="text"id="saturatesmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">of which monosaturates</th>
+            <th>
+              <label for="monosaturates100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="monosaturates100" class="Nutritional">
+            </th>
+            <th>
+              <label for="monosaturatesmeth"></label>
+              <input type="text"id="monosaturatesmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">of which polysaturates</th>
+            <th>
+              <label for="polysaturates100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="polysaturates100" class="Nutritional">
+            </th>
+            <th>
+              <label for="polysaturatesmeth"></label>
+              <input type="text"id="polysaturatesmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">of which cholesterol</th>
+            <th>
+              <label for="cholesterol100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="cholesterol100" class="Nutritional">
+            </th>
+            <th>
+              <label for="cholesterolmeth"></label>
+              <input type="text"id="cholesterolmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="Bold row">Carbohydrate</th>
+            <th>
+              <label for="Carbohydrate100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Carbohydrate100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Carbohydratemeth"></label>
+              <input type="text"id="Carbohydratemeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">of which sugars</th>
+            <th>
+              <label for="sugars100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="sugars100" class="Nutritional">
+            </th>
+            <th>
+              <label for="sugarsmeth"></label>
+              <input type="text"id="sugarsmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">of which starches</th>
+            <th>
+              <label for="starches100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="starches100" class="Nutritional">
+            </th>
+            <th>
+              <label for="starchesmeth"></label>
+              <input type="text"id="starchesmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="Bold row">Fibre AOAC</th>
+            <th>
+              <label for="Fibre100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Fibre100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Fibremeth"></label>
+              <input type="text"id="Fibremeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="Bold row">Protein</th>
+            <th>
+              <label for="Protein100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Protein100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Proteinmeth"></label>
+              <input type="text"id="Proteinmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="Bold row">Moisture</th>
+            <th>
+              <label for="Moisture100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Moisture100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Moisturemeth"></label>
+              <input type="text"id="Moisturemeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="Bold rowl">Ash</th>
+            <th>
+              <label for="Ash100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Ash100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Ashmeth"></label>
+              <input type="text"id="Ashmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">Sodium</th>
+            <th>
+              <label for="Sodium100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Sodium100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Sodiummeth"></label>
+              <input type="text"id="Sodiummeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">Salt</th>
+            <th>
+              <label for="Salt100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Salt100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Saltmeth"></label>
+              <input type="text"id="Saltmeth">
+            </th>
+          </tr>
+          <tr>
+            <th class="row">Meat Content</th>
+            <th>
+              <label for="Meat100"></label>
+              <input [type="number"] {-moz-appearance:textfield;} id="Meat100" class="Nutritional">
+            </th>
+            <th>
+              <label for="Meatmeth"></label>
+              <input type="text"id="Meatmeth">
+            </th> 
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Obtained by:</th><br><br><br>
+          </tr>
+          <tr>
+            <th>Analysis</th>
+            <th>
+            <label for="Analysis"></label>
+            <input type="text" id="Analysis">
+            </th>
+          </tr>
+          <tr>
+            <th>Calculation</th>
+            <th>
+              <label for="Calculation"></label>
+              <input type="text" id="Calculation">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              State Source for Calculation
+            </th>
+            <th class="Source">
+              <label for="Source"></label>
+              <input type="text" id="Source">
+            </th>
+          </tr>
+        </thead>
+      </table><br><br>
+      <button type="Go to Page 8"><a href="Page8.html">Go to Page 8 out of 21</a></button>
+    </form>
+  </div>
+</body>
+</html>
